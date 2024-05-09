@@ -1,0 +1,784 @@
+*{
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body
+{
+    background-color: #eee;
+}
+
+.header
+{
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 20px 100px;
+}
+
+.header .logo
+{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.header .logo i
+{
+    color: green;
+}
+
+.header .navbar a
+{
+    font-size: 20px;
+    margin: 0 8px;
+    color: black;
+}
+
+.header .navbar a:hover
+{
+    color: green;
+}
+
+.header .icons div
+{
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 6px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+
+.header .icons div:hover
+{
+    color:  white;
+    background-color: green;
+}
+
+.header .search-form 
+{
+    background-color:  white;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+    top: 110%;
+    right: -110%;
+    width: 32%;
+    height: 51%;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+}
+
+.header .search-form.active
+{
+    right: 1%;
+    transition: .4s;
+}
+
+.header .search-form input
+{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    text-transform: none;
+    padding-left: 20px;
+    color: black;
+    font-size: 17px;
+}
+
+.header .search-form label
+{
+    color: black;
+    padding-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.header .search-form label:hover
+{
+    color: green;
+}
+
+.header .shopping-cart
+{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow:  0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+    width: 23%;
+    background-color: white;
+}
+
+.header .shopping-cart.active
+{
+    right: 1%;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 9px 0;
+    gap: 15px;
+}
+
+.header .shopping-cart .box img
+{
+    height: 120px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.header .shopping-cart .box .fa-trash
+{
+    font-size: 20px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.header .shopping-cart .box .fa-trash:hover
+{
+    color: green;
+}
+
+.header .shopping-cart .box .content h3
+{
+    font-size: 25px;
+    padding-bottom: 15px;
+}
+
+.header .shopping-cart .box .content span
+{
+    font-size: 19px;
+}
+
+.header .shopping-cart .box .content .quantity
+{
+    padding-left: 12px;
+}
+
+.header .shopping-cart .total
+{
+    font-size: 27px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.header .shopping-cart .btn
+{
+    
+    margin: 10px 0;
+    margin-left: 45px;
+}
+
+.btn
+{
+    margin-top: 15px;
+    cursor: pointer;
+    border: 3px solid black;
+    display: inline-block;
+    padding: 15px 80px;
+    font-size: 25px;
+    border-radius: .5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    background-color: green;
+    color: white;
+}
+
+.header .login-form
+{
+    position: absolute;
+    top: 110%;
+    right: -210%;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+}
+
+.header .login-form h3
+{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.header .login-form .box
+{
+    width: 100%;
+    margin: 8px 0;
+    border-radius: 1px;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: none;
+    color: black;
+}
+
+.header .login-form input
+{
+    border: none;
+    background-color:  rgb(248, 244, 244);;
+}
+
+.header .login-form .btn
+{
+    border: 3px solid;
+    background-color: white;
+    width: 80%;
+    margin: 8px 30px;
+}
+
+.header .login-form p
+{
+    font-size: 16px;
+    padding: 7px 0;
+    color: light;
+}
+
+.header .login-form p a
+{
+    color: green;
+    text-decoration: underline;
+}
+
+.header .login-form .btn:hover
+{
+    background-color: green;
+    color: white;
+}
+
+.header .login-form.active
+{
+    right: 1%;
+    transition: .4s linear;
+}
+
+
+
+.home
+{
+    
+    display: flex;
+    justify-content: center;
+    background-image: url(image/background.jpg) ;
+    background-position: center;
+    background-size: cover;
+   
+    padding-top: 10%;
+    padding-bottom: 10%;
+    
+}
+
+.home .content
+{
+    
+    text-align: center;
+    width: 60%;
+}
+
+.home .content h3
+{
+    color: black;
+    font-size: 35px;
+}
+
+.home .content h3 span
+{
+    color: green;
+}
+
+.home .content p
+{
+    font-size: 20px;
+    padding: 15px 0;
+    line-height: 1.8;
+}
+
+.home .btn
+{
+    width: 15%;
+   
+}
+
+.features
+{
+    padding: 30px 9%;
+}
+
+.heading
+{
+    text-align: center;
+   padding-top: 15px;
+   padding-bottom: 35px;
+    font-size: 35px;
+}
+
+.heading span
+{
+    background-color: green;
+    color: white;
+    display: inline-block;
+    padding: 7px 45px;
+    clip-path: polygon(100% 0%, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+
+.box-container
+{
+    display: flex;
+}
+
+
+.features .box-container .box
+{
+    border-radius: 5px;
+    margin: 10px;
+    padding: 45px 30px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+}
+
+.features .box-container .box:hover
+{
+    box-shadow: 1px 1px 10px 4px green;
+}
+.features .box-container .box img
+{
+    margin: 15px;
+    height: 225px;
+}
+.features .box-container .box h3
+{
+    font-size: 25px;
+    line-height: 1.8;
+}
+.features .box-container .box p
+{
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+
+.products
+{
+    padding: 30px 9%;
+    justify-content: center;
+}
+
+.products .content
+{
+    display: flex;
+}
+
+.products .content .box
+{
+    margin: 7px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+}
+
+.products .content .box .img
+{
+    width: 55%;
+    height: 45%;
+}
+
+.products .content .box:hover
+{
+    box-shadow: 1px 1px 10px 4px green;
+}
+
+.products .content .box:first-child
+{
+    margin-left: 0%;
+}
+
+
+.products .content .box img
+{
+   
+    padding: 10px 50px;
+    margin: 10px 0;
+   
+}
+
+.products .content .box h1
+{
+    margin-bottom: 10px;
+}
+    
+
+.products .content .box .price
+{
+    margin-bottom: 5px;
+    font-size: 18px;
+    
+}
+
+.products .content .box .stars
+{
+    color: orange;
+    margin-bottom: 5px;
+}
+
+.products .content .box .btn
+{
+    padding: 15px 40px;
+    margin-bottom: 40px;
+}
+
+
+
+.catagories
+{
+    padding: 30px 9%;
+    justify-content: center;
+}
+
+.catagories .box-container .box
+{
+    margin: 7px;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+}
+
+.catagories .box-container .box:hover
+{
+    box-shadow: 1px 1px 10px 4px green;
+}
+
+.catagories .box-container .box:first-child
+{
+    margin-left: 0%;
+}
+
+
+.catagories .box-container .box img
+{
+   
+    padding: 10px 50px;
+    margin: 10px 0;
+   
+}
+.catagories .box-container .box .fruits
+{
+   width: 70%;
+}
+.catagories .box-container .box .medicine
+{
+   width: 70%;
+   height: 47%;
+}
+.catagories .box-container .box .meet
+{
+    width: 60%;
+    height: 47%;
+}
+.catagories .box-container .box .cosmetic
+{
+   width: 70%;
+   height: 47%;
+}
+.catagories .box-container .box h1
+{
+    margin-bottom: 10px;
+}
+    
+.catagories .box-container .box p
+{
+    margin-bottom: 5px;
+    font-size: 18px; 
+}
+
+.catagories .box-container .box .btn
+{
+    padding: 15px 40px;
+    margin-bottom: 40px;
+}
+
+
+
+.review
+{
+    padding: 30px 9%;
+}
+
+
+.review .review-box
+{
+    padding: 15px;
+}
+
+.review .review-b
+{
+    display: flex;
+}
+
+
+.review .review-box .box
+{
+    margin-left: 20px;
+    padding: 45px 30px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey; 
+}
+
+
+.review .review-box .box:hover
+{
+    box-shadow: 1px 1px 10px 4px green;
+}
+.review .review-box .box img
+{
+    border-radius: 50%; 
+    height: 150px;
+    width: 150px;
+}
+
+.review .review-box .box p
+{
+    font-size: 20px;
+    line-height: 1.8;
+    padding: 15px 0;
+}
+
+.review .review-box .box h3
+{
+    font-size: 25px;
+    line-height: 1.8;
+}
+
+.review .review-box .box .stars
+{
+    color: orange;
+    margin-bottom: 5px;
+}
+
+.blogs .box-container .box img
+{
+    height: 250px;
+    width: 100%;
+}
+
+.blogs .box-container .box:first-child
+{
+    margin-left: 0%;
+}
+
+.blogs
+{
+    padding: 30px 9%;
+}
+
+.blogs .box-container .box .content
+{
+    padding: 20px;
+}
+
+.blogs .box-container .box .content .icons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+.blogs .box-container .box .content .icons a
+{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.blogs .box-container .box
+{
+    border-radius: 5px;
+    margin-left: 15px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0px 2px 4px 0px grey,0px 2px 4px 0px grey;
+}
+
+.blogs .box-container .box:hover
+{
+    box-shadow: 1px 1px 10px 4px green;
+}
+
+.blogs .box-container .box .content .icons a i
+{
+    color: green;
+    padding-right: 8px;
+}
+
+.blogs .box-container .box .content h3
+{
+    line-height: 1.7;
+    font-size: 25px;
+    padding: 7px 0;
+}
+
+
+.blogs .box-container .box .content p
+{
+    line-height: 1.7;
+    font-size: 20px;
+    padding: 7px 0;
+}
+
+.footer
+{
+    background-color: #fff;
+    padding: 10px 80px;
+}
+
+.footer .box-container
+{
+    display: flex;
+   
+   
+}
+
+.footer .box-container i
+{
+    color: green;
+}
+.footer .box-container .box
+{
+    width: 60%;
+}
+
+.footer .box-container .box a
+{
+    color: black;
+}
+.footer .box-container .box:first-child
+{
+   margin-right: 30px;
+}
+.footer .box-container .box h3
+{
+    font-size: 37px;
+    padding: 15px 0;
+}
+
+.footer .box-container .box .link
+{
+    display: block;
+    font-size: 22px;
+    padding: 7px 0;
+}
+
+.footer .box-container .box .links i
+{
+    color: green;
+   padding-right: 7px;
+}
+
+.footer .box-container .box .link:hover i
+{
+    padding-right: 30px;
+}
+
+.footer .box-container .box p
+{
+    line-height: 1.8;
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+.footer .box-container .box .share a
+{
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.footer .box-container .box .share a:hover
+{
+    color: white;
+    background-color: green;
+}
+.footer .box-container .box .email
+{
+    width: 100%;
+    margin: 8px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 23px;
+    text-transform: none;
+}
+
+.footer .box-container .box img
+{
+    height: 18%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer .credit
+{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    padding-top: 37px;
+    font-size: 25px;
+    border-top: 1px solid;
+}
+
+.footer .credit span
+{
+    color: green;
+}
+
+.footer .box-container .box .btn
+{
+    background-color: #fff;
+}
+
+.footer .box-container .box .btn:hover
+{
+    background-color: green;
+}
